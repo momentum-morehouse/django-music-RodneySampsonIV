@@ -1,4 +1,4 @@
-"""{{ project_name }} URL Configuration
+"""{{music}} URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/3.0/topics/http/urls/
@@ -16,9 +16,13 @@ Including another URLconf
 from django.contrib import admin
 from django.conf import settings
 from django.urls import include, path
+from my_music import views as album_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', album_views.index, name='list_albums'),
+    path('albums/add/', album_views.add_albums, name='add_albums'),
+    path('albums/<int:pk>/delete/',album_views.delete_albums,name='delete_albums'),
 ]
 
 if settings.DEBUG:

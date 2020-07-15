@@ -32,7 +32,8 @@ SECRET_KEY = env('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['django-music-rodneysampsoniv--rodneysampson.repl.co',
+'django-music-rodneysampsoniv.rodneysampson.repl.co','10.128.0.65:5026' ]
 
 # Application definition
 
@@ -50,6 +51,7 @@ INSTALLED_APPS = [
 
     # Project-specific
     'users',
+    'my_music'
 ]
 
 MIDDLEWARE = [
